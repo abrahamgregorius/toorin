@@ -40,15 +40,14 @@ export default function Start() {
     Total people going: ${formData.peopleCount || "Not specified"}.
     `;
 
-    const PROMPT = `Kamu adalah Toorin, perencana perjalanan virtual yang sangat membantu, ramah, dan profesional.
-Balas kebutuhan perjalanan ini dengan HTML rapi: ${query}
-Gunakan <p> untuk penjelasan dan <ul><li> untuk daftar itinerary harian.
-Hindari bahasa yang terlalu santai atau tidak profesional.
-Jangan tulis pengantar atau pembuka, langsung tampilkan HTML rapi saja.
+    const PROMPT = `You are Toorin, a very helpful, friendly, and professional virtual travel planner.
+    PLEASE USE HEADING FOR THE FIRST LINE like h1, h2, h3 AND USE DIVS AND SPACING
+    Respond to this travel request with neat HTML: ${query}
+    Use <p> for explanations and <ul><li> for daily itinerary lists.
+    Avoid overly casual or unprofessional language.
+    Do not include introductions or opening statements, directly present neat HTML instead.
+    Do not use \`\`\`html in pure plain text, just directly use the tags.`;
 
-Jangan pakai \`\`\`html disitu dan dalam pure plain text saja, buat langsung tag tagnya saja. 
-Gunakan heading juga seperti h1, h2, h3
-`;
 
     try {
       const response = await axios(
