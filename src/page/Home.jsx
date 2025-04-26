@@ -4,6 +4,7 @@ import FAQSection from "../components/FAQ";
 import TestimonialSection from "../components/Testimonial";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -19,12 +20,12 @@ export default function LandingPage() {
           Create the perfect travel itinerary in just minutes. Organize your
           destinations, activities, and schedules — all in one easy-to-use app.
         </p>
-        <a
-          href="#"
+        <Link
+          to="/start"
           className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition"
         >
           Start Planning
-        </a>
+        </Link>
       </section>
 
       {/* Features Section */}

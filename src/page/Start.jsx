@@ -44,7 +44,10 @@ export default function Start() {
 Balas kebutuhan perjalanan ini dengan HTML rapi: ${query}
 Gunakan <p> untuk penjelasan dan <ul><li> untuk daftar itinerary harian.
 Hindari bahasa yang terlalu santai atau tidak profesional.
-Jangan tulis pengantar atau pembuka, langsung tampilkan HTML rapi saja. Jangan pakai \`\`\`html disitu dan dalam pure plain text saja, buat langsung tag tagnya saja. Gunakan heading juga seperti h1, h2, h3
+Jangan tulis pengantar atau pembuka, langsung tampilkan HTML rapi saja.
+
+Jangan pakai \`\`\`html disitu dan dalam pure plain text saja, buat langsung tag tagnya saja. 
+Gunakan heading juga seperti h1, h2, h3
 `;
 
     try {
@@ -64,7 +67,7 @@ Jangan tulis pengantar atau pembuka, langsung tampilkan HTML rapi saja. Jangan p
       );
 
       setResult(
-        response.data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+        response.data?.candidates?.[0]?.content?.parts?.[0]?.text.replace(/```html|```/g, '').trim() ||
           "No result found."
       );
     } catch (error) {
