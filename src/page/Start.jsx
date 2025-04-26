@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Start() {
   const [formData, setFormData] = useState({
     location: "",
-    duration: "",
+    night: "",
+    day: "",
     purpose: "",
     activity: "",
     budget: "",
@@ -27,7 +29,9 @@ export default function Start() {
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
       <aside className="w-64 bg-white shadow-md p-6 hidden md:block">
-        <h2 className="text-2xl font-bold mb-8 text-blue-600">Toorin</h2>
+        <Link to="/" className="text-2xl font-bold mb-8 text-blue-600">
+          Toorin
+        </Link>
         <nav className="space-y-4">
           <a href="#" className="block text-gray-700 hover:text-blue-600">
             Dashboard
@@ -79,7 +83,6 @@ export default function Start() {
                 </div>
 
                 {/* Duration - half width */}
-                {/* Duration - half width (Day & Night Split) */}
                 <div className="md:col-span-12">
                   <label className="block mb-2 font-medium">
                     Duration <span className="text-red-500">*</span>
@@ -171,19 +174,44 @@ export default function Start() {
                   </div>
                 </div>
 
-                {/* Children Checkbox - half width */}
-                <div className="md:col-span-6 flex items-center mt-7">
-                  <input
-                    type="checkbox"
-                    id="hasChildren"
-                    name="hasChildren"
-                    checked={formData.hasChildren}
-                    onChange={handleChange}
-                    className="w-5 h-5 mr-3"
-                  />
-                  <label htmlFor="hasChildren" className="text-lg font-medium">
-                    Are there any children joining?
+                {/* How many people - full width */}
+                <div className="md:col-span-6">
+                  <label
+                    htmlFor="peopleCount"
+                    className="block mb-2 font-medium"
+                  >
+                    How many people will go there?
                   </label>
+                  <input
+                    type="number"
+                    id="peopleCount"
+                    name="peopleCount"
+                    value={formData.peopleCount || ""}
+                    onChange={handleChange}
+                    min="1"
+                    className="w-full border border-gray-300 p-3 rounded-md"
+                    required
+                  />
+                </div>
+
+                {/* Children Checkbox - half width */}
+                <div className="md:col-span-6">
+                  <div className="flex items-center mb-3">
+                    <input
+                      type="checkbox"
+                      id="hasChildren"
+                      name="hasChildren"
+                      checked={formData.hasChildren}
+                      onChange={handleChange}
+                      className="w-5 h-5 mr-3"
+                    />
+                    <label
+                      htmlFor="hasChildren"
+                      className="text-lg font-medium"
+                    >
+                      Are there any children joining?
+                    </label>
+                  </div>
                 </div>
               </div>
 
