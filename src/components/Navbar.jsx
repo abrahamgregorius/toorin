@@ -20,7 +20,7 @@ export default function Navbar() {
             Contact
           </Link>
           <Link
-            to="/"
+            to="/start"
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
           >
             Start planning
@@ -52,7 +52,7 @@ export default function Navbar() {
           <a href="/" className="block hover:text-blue-600">Home</a>
           <a href="/pricing" className="block hover:text-blue-600">Pricing</a>
           <a href="/contact" className="block hover:text-blue-600">Contact</a>
-          <a href="/" className="block bg-blue-600 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+          <a href="/start" className="block bg-blue-600 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-700 transition">
             Start planning
           </a>
         </div>
