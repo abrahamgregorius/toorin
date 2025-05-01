@@ -44,9 +44,12 @@ export default function Start() {
     PLEASE USE HEADING FOR THE FIRST LINE like h1, h2, h3 AND USE DIVS AND SPACING
     Respond to this travel request with neat HTML: ${query}
     Use <p> for explanations and <ul><li> for daily itinerary lists.
+    Write the estimated expenses after the time like Morning(...):.
+    Write down multiple hidden gems of the location on the top of the page with this format after the itinerary "<b>Hidden gem</b>: <li> ... <li>"
     Avoid overly casual or unprofessional language.
     Do not include introductions or opening statements, directly present neat HTML instead.
-    Do not use \`\`\`html in pure plain text, just directly use the tags.`;
+    Do not use \`\`\`html in pure plain text, just directly use the tags.
+    `;
 
 
     try {

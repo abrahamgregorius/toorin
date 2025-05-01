@@ -6,7 +6,7 @@ export default function TestimonialSection() {
         <div className="space-y-8">
           <Testimonial
             name="John Doe"
-            feedback="TripPlanner helped me organize my vacations seamlessly. The process is so easy!"
+            feedback="Toorin helped me organize my vacations seamlessly. The process is so easy!"
             location="New York, USA"
           />
           <Testimonial
@@ -16,7 +16,7 @@ export default function TestimonialSection() {
           />
           <Testimonial
             name="Michael Johnson"
-            feedback="As a frequent traveler, TripPlanner made my life so much easier with its user-friendly interface."
+            feedback="As a frequent traveler, Toorin made my life so much easier with its user-friendly interface."
             location="Sydney, Australia"
           />
         </div>

@@ -18,7 +18,7 @@ export default function FAQSection() {
         <div className="space-y-4">
           <FAQItem
             index={0}
-            question="How do I start using TripPlanner?"
+            question="How do I start using Toorin?"
             answer="Sign up for free, and start adding your trips. You can use the drag-and-drop interface to organize your itinerary."
             activeIndex={activeIndex}
             onToggle={handleToggle}
